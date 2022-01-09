@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>이름 : <input type="text" id="name"></label><br>
+    <label>나이 : <input type="text" id="age"></label>
+    <button type="button" class=btn>
+        완료
+    </button>
+    <p class="msg">
+        당신의 이름은 " <span class="name"></span> ",<br>
+        나이는 " <span class="age"></span> "입니다.
+    </p>
+
+    <script>
+        const text = document.getElementById('name');
+        const text2 = document.getElementById('age');
+        const btn = document.querySelector('.btn');
+        const span = document.querySelector('.msg .name');
+        const span2 = document.querySelector('.msg .age');
+
+        btn.addEventListener('click', function() {
+            span.innerHTML = text.value
+            span2.innerHTML = text2.value
+        })
+    </script>
+2
+</body>
+</html>

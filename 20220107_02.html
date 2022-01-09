@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image {
+            width:90%;
+            margin:30px auto;
+            height:500px;
+            overflow:hidden;
+        }
+
+        .image img {
+            width:100%;
+            min-height:100%;
+        }
+
+        .control {
+            text-align:center;
+            height:50px;
+            display:flex;
+            justify-content:center;
+
+        }
+
+        .control input {
+            width:100px;
+            margin-right:20px;
+            text-align:center;
+            font-weight:600;
+        }
+
+        .control input:focus {
+            background-color:dodgerblue;
+            color:#fff;
+        }
+
+        .control .btn {
+            width:200px;
+            border-radius:40px;
+            background-color:dodgerblue;
+            color:#fff;
+            border:none;
+            transition:all 0.4s;
+            cursor:pointer;
+        }
+
+        .control .btn:hover {
+            opacity:0.7;
+        }
+
+        .btn2 {
+            background-color:#222;
+            color:#fff;
+        }
+
+        .btn2.on {
+            background-color:red;
+        }
+
+        .colorBox {
+            width:500px;
+            margin:100px auto;
+        }
+
+        .colorBox .box {
+            background-color:coral;
+            height:300px;
+        }
+
+        .colorBox .btnArea {
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+        }
+
+        .colorBox button {
+            margin:0 20px;
+            background-color:dodgerblue;
+            color:#fff;
+            border-radius:30px;
+            height:40px;
+            border:none;
+        }
+
+        .colorBox .blue {
+            background-color:blue;
+        }
+
+        .colorBox .olive {
+            background-color:olive;
+        }
+
+        .colorBox .gold {
+            background-color:gold;
+        }
+    </style>
+</head>
+<body> 
+    <div class="image">
+        <img src="./images/dummy_0.jpg" alt="night">
+    </div>
+    <div class="control"> 
+        <input type="text" placeholder="Input word" class="input">
+        <button type="button" class="btn">
+            change Image
+        </button> 
+        <button tpye="button" class="btn2">
+            BTN 2
+        </button>
+    </div>
+
+    <div class="colorBox">
+        <div class="box">COLOR BOX</div>
+        <div class="btnArea">
+            <button type=button>blue</button>
+            <button type=button>olive</button>
+            <button type=button>gold</button>
+        </div>
+        
+    </div>
+    <script>
+        const input = document.querySelector('.input');
+        const btn = document.querySelector('.btn');
+        const btn2 = document.querySelector('.btn2');
+        const img = document.querySelector('.image img');
+        let count = 0;
+        let url = '';
+
+        btn2.classList.add('blue');
+        btn2.classList.remove('blue');
+
+        console.log(btn2.classList.contains('blue'));
+
+        btn.addEventListener('click',function() {
+            count = input.value;
+            console.log(count);
+            url = `./images/dummy_${count}.jpg`;
+            img.setAttribute('src', url);
+        })
+
+        
+
+        // const a = 3;
+        // const b = 4;
+        // const result = a + b;
+        // console.log( a + '+' + b + '=' + result);
+        // console.log(`${a} + ${b} = ${result}`);
+       
+    </script>
+</body>
+</html>

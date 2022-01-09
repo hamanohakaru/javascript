@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colorBox {
+            width:500px;
+            margin:100px auto;
+        }
+
+        .colorBox .box {
+            background-color:coral;
+            height:300px;
+        }
+
+        .colorBox .btnArea {
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+        }
+
+        .colorBox button {
+            margin:0 20px;
+            background-color:dodgerblue;
+            color:#fff;
+            border-radius:30px;
+            height:40px;
+            border:none;
+        }
+
+        .colorBox .blue {
+            background-color:blue;
+        }
+
+        .colorBox .olive {
+            background-color:olive;
+        }
+
+        .colorBox .gold {
+            background-color:gold;
+        }
+    </style>
+</head>
+<body> 
+    <div class="colorBox">
+        <div class="box">COLOR BOX</div>
+        <div class="btnArea">
+            <button type=button class="btn1">blue</button>
+            <button type=button class="btn2">olive</button>
+            <button type=button class="btn3">gold</button>
+        </div>
+        
+    </div>
+    <script>
+        const box = document.querySelector('.box');
+        const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+        const btn3 = document.querySelector('.btn3');
+
+        btn1.addEventListener('click',function() {
+            
+        })
+
+        // const input = document.querySelector('.input');
+        // const btn = document.querySelector('.btn');
+        // const btn2 = document.querySelector('.btn2');
+        // const img = document.querySelector('.image img');
+        // let count = 0;
+        // let url = '';
+
+        // btn2.classList.add('blue');
+        // btn2.classList.remove('blue');
+
+        // console.log(btn2.classList.contains('blue'));
+
+        // btn.addEventListener('click',function() {
+        //     count = input.value;
+        //     console.log(count);
+        //     url = `./images/dummy_${count}.jpg`;
+        //     img.setAttribute('src', url);
+        // })
+
+        
+
+        // // const a = 3;
+        // // const b = 4;
+        // // const result = a + b;
+        // // console.log( a + '+' + b + '=' + result);
+        // // console.log(`${a} + ${b} = ${result}`);
+       
+    </script>
+</body>
+</html>

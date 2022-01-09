@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery img {
+            max-width:100%;
+        }
+
+        .gallery .thumb {
+            display:flex;
+            flex-wrap:wrap;
+        }
+
+        .gallery .thumb img {
+            width:100px;
+            height:100px;
+            margin:2px;
+        }
+    </style>
+</head>
+<body>
+    <p class="txt">HELLO WORLD</p>
+    <a href="http://www.naver.com" class="a">NAVER</a>
+    <button type="button" class="changeLink">
+        구글링크로 바꾸기
+    </button>
+
+    <div class="gallery">
+        <img src="./images/dummy_5.jpg" alt="" class="big">
+        <div class="thumb">
+            <img src="./images/dummy_0.jpg" alt="" class="thumb_a">
+            <img src="./images/dummy_1.jpg" alt="" class="thumb_b">
+            <img src="./images/dummy_2.jpg" alt="" class="thumb_c">
+            <img src="./images/dummy_3.jpg" alt="" class="thumb_d">
+            <img src="./images/dummy_4.jpg" alt="" class="thumb_e">
+        </div>
+    </div>
+    <script>
+        const big = document.querySelector('.big');
+        const img1 = document.querySelector('.thumb_a');
+        const img2 = document.querySelector('.thumb_b');
+        const img3 = document.querySelector('.thumb_c');
+        const img4 = document.querySelector('.thumb_d');
+        const img5 = document.querySelector('.thumb_e');
+        let src = '';
+
+        img1.addEventListener('click',function() {
+            //내가 클릭한 지금 이미지의 경로를 불러오기
+            src = img1.getAttribute('src');
+            img1.setAttribute('title','HELLO')
+            big.setAttribute('src', src);
+        })
+        img2.addEventListener('click',function() {
+            //내가 클릭한 지금 이미지의 경로를 불러오기
+            src = img2.getAttribute('src');
+            big.setAttribute('src', src);
+        })
+        img3.addEventListener('click',function() {
+            //내가 클릭한 지금 이미지의 경로를 불러오기
+            src = img3.getAttribute('src');
+            big.setAttribute('src', src);
+        })
+        img4.addEventListener('click',function() {
+            //내가 클릭한 지금 이미지의 경로를 불러오기
+            src = img4.getAttribute('src');
+            big.setAttribute('src', src);
+        })
+        img5.addEventListener('click',function() {
+            //내가 클릭한 지금 이미지의 경로를 불러오기
+            src = img5.getAttribute('src');
+            big.setAttribute('src', src);
+        })
+
+
+        const txt = document.querySelector('.txt');
+
+        txt.innerHTML = 'Apple';
+        // object = txt
+        txt.style.color = 'red';
+        txt.style.fontSize = '30px';
+        txt.style.backgroundColor = 'blue';
+
+        const link = document.querySelector('.a');
+        console.log(link.innerHTML);
+        console.log(link.getAttribute('href'))
+
+        const btn1 = document.querySelector('.changeLink');
+        btn1.addEventListener('click',function() {
+            link.setAttribute('href','http://www.google.com');
+            link.innerHTML = 'GOOGLE'
+        })
+    </script>
+</body>
+</html>

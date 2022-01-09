@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="h1">HELLO</h1>
+    <input type="text" placeholder="Input word" class="input">
+    <button type="button" class="btn">CLICK</button>
+    <p class="p">
+        Paragraph
+    </p>
+    <img src="./images/dummy_0.jpg" alt="" class="img1">
+    <img src="./images/dummy_1.jpg" alt="" class="img2">
+    <button type="button" class="btn2">Change Img dummy_1.jpg</button>
+
+    <script>
+        const h1 = document.querySelector('.h1');
+        const btn = document.querySelector('.btn');
+        const btn2 = document.querySelector('.btn2');
+        const p = document.querySelector('.p');
+        const input = document.querySelector('.input');
+        const img1 = documnet.querySelector('.img1');
+        const img2 = document.querySelector('.img2');
+        h1.innerHTML = 'HELLO WORLD';
+        btn.innerHTML = '글자바꾸기';
+        p.innerHTML = h1.innerHTML;
+        p.innerHTML = input.value;
+
+
+        src
+        
+
+        btn.addEventListener('click', function() {
+            p.innerHTML = input.value;
+        })
+    </script>
+</body>
+</html>
