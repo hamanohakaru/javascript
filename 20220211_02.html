@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" placeholder="ID" class="user_id">
+    <input type="text" placeholder="PW" class="user_pw">
+    <button type="button" class="btnLogin" onclick="checkLogin();">LOGIN</button>
+
+<script>
+    let userId = 'joon';
+    let userPw = '1234';
+
+    function checkLogin() {
+        let getId =  document.querySelector('.user_id').value;
+        let getPw =  document.querySelector('.user_pw').value;
+        console.clear();
+        if( userId === getId) {
+            console.log('ID OKAY') 
+            if( userPw === getPw) {
+                console.log('Logged in')
+            } else {
+                console.log('Pw is wrong')
+            }
+
+        } else {
+            console.log('ID WRONG')
+        }
+
+        
+
+    }
+
+    
+
+
+
+</script>
+
+</body>
+</html>

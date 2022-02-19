@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resultBox {
+            border:1px solid #d8d8d8;
+            width:90%;
+            margin:50px auto;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    구구단<input type="text" placeholer="number" class="number"><br>
+    <button type="button" class="btn" onclick="makedan()">계산</button>
+    <div class="resultBox">
+
+    </div>
+    
+<script>
+    // let fruits = ['apple','melon','banana','orange','grape','berry','mango'];
+ 
+
+    // for(let i = 0; i < fruits.length ;  i++  ) {
+    //     console.log(fruits[i])
+    // }
+
+    // console.clear();
+
+    // let total = 0; 
+    // for(let i=1; i <= 10; i++) {
+    //     total += i;
+    //     // total = total + i; 
+    // }
+
+    // console.log(total);
+
+        let box = document.querySelector('.resultBox')
+    
+    
+    function makedan () {
+        let dan = document.querySelector(".number").value;
+
+
+        for(let i=1; i <= 9; i++) {
+        // document.write('<p>' + dan + '*' + i + '=' + dan * i + '</p>');
+        box.innerHTML += `<p>${dan}*${i}=${dan*i}</p>` ;
+        }
+    }
+
+    
+
+
+</script>
+
+</body>
+</html>

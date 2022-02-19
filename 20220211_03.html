@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    국어<input type="text" placeholder="score" class="korean"><br>
+    영어<input type="text" placeholder="score" class="english"><br>
+    수학<input type="text" placeholder="score" class="math"><br>
+    <button type="button" class="btn" onclick="btn();">총점구하기</button>
+
+<script>
+    let korean = document.querySelector('.korean').value;
+    let english = document.querySelector('.english').value;
+    let math = document.querySelector('.math').value;
+
+    function btn() {
+        let korean =  document.querySelector('.korean').value;
+        let english =  document.querySelector('.english').value;
+        let math =  document.querySelector('.math').value;
+        let sum = parseInt(korean) + parseInt(english) + parseInt(math);
+
+        console.log(sum);
+    }
+
+
+
+</script>
+
+</body>
+</html>
