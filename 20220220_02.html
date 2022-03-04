@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resultBox {
+            border:1px solid #d8d8d8;
+            width:90%;
+            margin:50px auto;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    
+<script>
+    
+
+    function countAlpha(word) {
+        let text = 'Hello javascript and you, And me';
+        let count = 0;
+
+        console.log(text.length)
+        // a -> count
+        for(let i=0; i <text.length; i++) {
+        // console.log(text[i]);
+        if(text[i] == 'word') {
+            // console.log(`Hello javascript and you, And me" has ${count} 'a'.`)
+            count++;
+        }
+        }
+        console.log(`this sentence has ${count} ${word}`)
+    }
+    countAlpha('a')
+</script>
+
+</body>
+</html>
