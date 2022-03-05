@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        #content {
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-gap:10px;
+        }
+
+        #content img {
+            width:100%;
+            cursor:pointer;
+        }
+
+        .modal {
+            position:fixed;left:0;top:0;
+            display:grid;align-items:center;justify-items:center;
+            padding:25px;
+            background:rgba(0,0,0,0.9);
+            opacity:0;visibility: hidden;
+            width:100%;height:100%;box-sizing:border-box;
+            cursor:pointer;
+        }
+
+        .modal small {
+            display:block;
+            margin-top:10px;
+            font-weight:bold;
+            color:aquamarine;
+        }
+
+        .modal img {
+            height:70vh;
+            max-width:100%;
+        }
+
+        .show {
+            opacity:1; visibility: visible;
+        }
+       
+    </style>
+</head>
+<body>
+   <h1 class="h1">HELLO</h1>
+    <div id="content">
+    </div>
+    <div class="modal">
+        
+    </div>
+    <!-- <img src="./images/dummy0.jpg" data-big="./images/dummy0_big.jpg" class="img"> -->
+
+</head>
+<body>
+    
+<script>
+    const h1 = document.querySelector('.h1');
+    let text = h1.innerHTML;
+    console.log(text);
+    text = text + 'good morning';
+    console.log(text);
+
+    text = text + 'Hi';
+    console.log(text);
+
+    text = text + 'html';
+    h1.innerHTML  = text;
+    // console.log(h1);
+    // h1.style.color = 'red';
+    // h1.innerHTML = '<img src="./images/dummy0.jpg">"'
+
+    // let image = [ 'dummy0','dummy1','dummy2','dummy3','dummy4','dummy5']
+    // let big = ['dummy0_big','dummy1_big']
+    let image = [];
+    let big = [];
+    let alt = [
+        'night city',
+        'morning city',
+        'buildings',
+        'sunset buildings',
+        'team meeting',
+        'look at mirror'
+    ]
+    let count = 6;
+    for(let i = 0; i< count; i++) {
+        image.push(`dummy${i}`)
+    }
+    for(let i = 0; i< count; i++) {
+        big.push(`dummy${i}_big`)
+    }
+
+    console.log(image)
+
+    const content = document.querySelector('#content');
+    console.log(content);
+
+    let imgList = '';
+    for(let i=0; i<count; i++) {
+        imgList = imgList +  `<img src="./images/${image[i]}.jpg" data-big="./images/${big[i]}.jpg">`
+    }
+    content.innerHTML = imgList;
+    
+    const imgs = content.querySelectorAll('img'); 
+    const modal = document.querySelector('.modal');
+    console.log(imgs);
+
+    // img[0].addEventListener('click',function() {
+    //     modal.classList.add('show');
+    //     modal.innerHTML = `<img src="${img[0].dataset.big}">`;
+    // });
+    // img[1].addEventListener('click',function() {
+    //     modal.classList.add('show');
+    //     modal.innerHTML = `<img src="${img[1].dataset.big}">`;
+    // });
+    // img[2].addEventListener('click',function() {
+    //     modal.classList.add('show');
+    //     modal.innerHTML = `<img src="${img[2].dataset.big}">`;
+    // });
+    // img[3].addEventListener('click',function() {
+    //     modal.classList.add('show');
+    //     modal.innerHTML = `<img src="${img[3].dataset.big}">`;
+    // });
+
+    // for(let i=0; i<imgs.length; i++) {
+    //     imgs[i].addEventListener('click',function() {
+    //         modal.classList.add('show');
+    //         modal.innerHTML = `<img src="${imgs[i].dataset.big}">`;
+    //     })
+    // }
+
+    imgs.forEach(function(img,index) {
+        img.addEventListener('click',function() {
+            modal.classList.add('show');
+            modal.innerHTML = `<img src="${this.dataset.big}"> <small>hello</small>`;
+        })
+    })
+
+    modal.addEventListener('click',function() {
+        modal.classList.remove('show');
+
+    })
+
+</script>
+
+</body>
+</html>

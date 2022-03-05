@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resultBox {
+            border:1px solid #d8d8d8;
+            width:90%;
+            margin:50px auto;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    
+<script>
+    printName(3, 'hello')
+
+    function printName(num, word) {
+        let friends = [ 'kim', 'park', 'lim', 'choi', 'joe', 'lee']
+
+        for(let i=0; i<num; i++) {
+        console.log(`${friends[i]} ${word}`) 
+        }
+    }
+
+   
+
+    let a;
+    console.log(a);
+    a = 3;
+    console.log(a);
+
+    let cars = ['racing car','truck','bus','sports car']
+    console.log(cars[0].length, cars[1][4]);
+    console.log(cars[cars.length-1]);
+    cars.push('cooper');
+    console.log(cars)
+    
+
+</script>
+
+</body>
+</html>

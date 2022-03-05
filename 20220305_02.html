@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .resultBox {
+            border:1px solid #d8d8d8;
+            width:90%;
+            margin:50px auto;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    
+<script>
+ 
+
+    let cars = ['racing car','truck','bus','sports car']
+    cars.push('mini car'); // add, last
+    console.log(cars);
+    cars.pop(); // delete, last
+    console.log(cars);
+    cars.unshift('mini car'); // add, first
+    console.log(cars); 
+    cars.shift(); // delete, first
+    console.log(cars);
+
+    for(let car of cars) { 
+        console.log(car)
+    }
+
+    cars.forEach(function(car, index) {
+        console.log(car, index)
+    })
+
+    let fruits = ['melon','lemon','banana','berry','kiwi','orange']
+    fruits.push('grape');
+    console.log(fruits);
+    fruits.pop();
+    console.log(fruits);
+    fruits.unshift('grape');
+    console.log(fruits);
+    fruits.shift();
+    console.log(fruits);
+
+    for(let i = 0; i<fruits.length; i++) {
+        console.log(fruits[i])
+    }
+
+    for(let fruit of fruits) {
+        console.log(fruit)
+    }
+
+    fruits.forEach(function() {
+        console.log('hello')
+    });
+
+    fruits.forEach(function(fruit, index) {
+        console.log(fruit, index)
+    })
+
+
+
+</script>
+
+</body>
+</html>
